@@ -1,0 +1,84 @@
+<div class="h-20 w-full flex justify-between items-center p-4 shadow-md ">
+
+    <!-- Logo -->
+    <div class="font-bold text-3xl text-teal-600 ml-4">
+        Logo 
+    </div>
+
+    <!-- Search Box -->
+    <div class=" hidden lg:block flex-1 mx-4 max-w-40">
+        <input type="input" placeholder="Search here..." 
+        class="w-full py-2 border-b-[1px] border-b-gray-400  outline-none "/>
+
+    </div>
+
+    <!-- links -->
+
+    <div class="hidden text-md lg:flex items-center space-x-6 font-semibold">
+        <div class="flex justify-between items-center">
+            <a href="#" class="text-teal-600">Home  </a> <svg class="w-4 h-4 ml-1 text-teal-600 group-hover:text-gray-800" fill="currentColor"
+        viewBox="0 0 20 20">
+        <path
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+    </svg>
+        </div>
+        <div class="flex justify-between items-center">
+            <a href="#" class="hover:text-teal-600">Pages</a> <svg class="w-4 h-4 ml-1 text-gray-600 group-hover:text-gray-800" fill="currentColor"
+        viewBox="0 0 20 20">
+        <path
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+    </svg>
+        </div>
+        <div class="flex justify-between items-center">
+            <a href="#" class="hover:text-teal-600">Insurance</a> <svg class="w-4 h-4 ml-1 text-gray-600 group-hover:text-gray-800" fill="currentColor"
+        viewBox="0 0 20 20">
+        <path
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+    </svg>
+        </div>
+        <div class="flex justify-between items-center">
+            <a href="#" class="hover:text-teal-600">Blog</a> <svg class="w-4 h-4 ml-1 text-gray-600 group-hover:text-gray-800" fill="currentColor"
+        viewBox="0 0 20 20">
+        <path
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+    </svg>
+        </div>
+        <a href="#" class="hover:text-teal-600">Contact Us</a>
+    </div>
+
+
+    <!-- mobile links -->
+    <div [ngClass]="{'fixed': isMobileMenuOpen, 'hidden': !isMobileMenuOpen}"
+        class="cursor-pointer z-[1]  top-[10%] left-1/2 transform -translate-x-1/2 w-[80%] rounded-lg shadow-xl bg-white flex flex-col font-semibold">
+
+        <a href="#" class="w-full px-6 py-4 border-b text-left text-teal-600">Home</a>
+        <a href="#" class="w-full px-6 py-4 border-b text-left hover:text-teal-600">About Us</a>
+
+        <div class="w-full flex justify-between items-center px-6 py-4 border-b text-left hover:text-teal-600">
+            <a href="#">Insurances</a>
+        </div>
+
+        <a href="#" class="w-full px-6 py-4 border-b text-left hover:text-teal-600">Contact Us</a>
+
+        <div class="w-full flex justify-between items-center px-6 py-4 text-left hover:text-teal-600">
+            <a href="#">Other</a>
+        </div>
+    </div>
+    <!-- Phone Link -->
+    <div class="flex items-center space-x-6 text-md ml-4">
+        <div class="text-teal-600 font-semibold cursor-pointer hidden lg:flex justify-between items-center">
+            <img src="assets/phone.png" class="w-5 h-5 mr-2" />
+            <p>+(111) 65 458 856</p>
+        </div>
+
+        <div class="text-white font-semibold  cursor-pointer hover:bg-teal-500 hidden lg:flex justify-between space-x-2 items-center bg-teal-600 px-5 py-3 rounded-md ">
+            <img src="assets/edit-text.png" class="w-5 h-5 text-white  mr-2" />
+            Get A Quote
+        </div>
+
+        <!-- Mobile Menu -->
+        <img src="assets/align-text.png" class="w-7 h-7 cursor-pointer lg:hidden" (click)="toggleMobileMenu()" />
+    </div>
+
+    
+</div>
